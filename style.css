@@ -1,0 +1,305 @@
+/*
+Theme Name: BlankSlate
+Theme URI: https://github.com/tidythemes/blankslate
+Author: TidyThemes
+Author URI: http://tidythemes.com/
+Description: Please read: tidythemes.com/concept. BlankSlate is the definitive WordPress HTML5 boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/blankslate/issues. Thank you.
+Version: 2019.1
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: blankslate
+
+BlankSlate WordPress Theme © 2011-2019 TidyThemes
+BlankSlate is distributed under the terms of the GNU GPL
+*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}body{line-height:1}button{outline:0}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}q{display:inline;font-style:italic}q:before{content:'"';font-style:normal}q:after{content:'"';font-style:normal}textarea,input[type="text"],input[type="button"],input[type="submit"],input[type="reset"],input[type="search"],input[type="password"]{-webkit-appearance:none;appearance:none;border-radius:0}table{border-collapse:collapse;border-spacing:0}th,td{padding:2px}big{font-size:120%}small,sup,sub{font-size:80%}sup{vertical-align:super}sub{vertical-align:sub}dd{margin-left:20px}kbd,tt{font-family:courier;font-size:12px}ins{text-decoration:underline}del,strike,s{text-decoration:line-through}dt{font-weight:bold}address,cite,var{font-style:italic}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+.sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}.screen-reader-text{clip:rect(1px, 1px, 1px, 1px);position:absolute !important}
+
+body {
+    font-family: sans-serif;
+    word-wrap: break-word;
+}
+a {
+    text-decoration: none;
+    color:#0099ff;
+}
+a:hover {
+    color:#333;
+}
+input[type="submit"], button {
+    cursor: pointer;
+    padding:10px 15px;
+    background:#fff;
+    border:1px solid #ddd;
+}
+img {
+    cursor: pointer;
+    object-fit: cover;
+}
+#header {
+    position: fixed;
+    top:0;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top:3px solid #0099ff;
+    box-shadow:0 3px 5px 0 rgba(0,0,0,.2);
+}
+.con {
+    max-width:1100px;
+    margin:0 auto;
+}
+#header a {
+    color:#333;
+}
+#header #site-title {
+    float:left;
+}
+#header #site-title h1 {
+    font-size:22px;
+    line-height:2.5em;
+}
+#header #site-description {
+    display:none;
+}
+nav {
+    float:right;
+}
+nav ul li {
+    float:left;
+    position:relative;
+}
+nav ul li a {
+    display: block;
+    padding: 20px;
+    font-size:13px;
+}
+nav ul li.menu-item-has-children a {
+    padding-right:25px;
+}
+nav ul li.menu-item-has-children a:after {
+    content:"+";
+    z-index:11;
+    font-size:17px;
+    position: absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+}
+nav ul li ul {
+    display: none;
+    position: absolute;
+    width:180px;
+    box-shadow:0 3px 5px 0 rgba(0,0,0,.2);
+    background:#fff;
+    border:1px solid #ddd;
+    top:104%;
+}
+nav ul li.menu-item-has-children a:hover nav ul li ul {
+    display: block;
+}
+nav ul li.menu-item-has-children ul li a:after {
+    content:none;
+}
+nav ul li ul li {
+    float: none;
+}
+#header #search {
+    display: none;
+}
+#containers {
+    max-width:1100px;
+    margin:100px auto;
+}
+#container {
+    max-width:800px;    
+    margin:100px auto;
+    box-shadow:0 3px 5px 0 rgba(0,0,0,.2);
+    background-color:#fff;
+    padding:20px;
+    line-height:1.6em;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.backs {
+    background: #0099ff;
+    height: 400px;
+}
+.back {
+    background: #0099ff;
+    height: 400px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    right:0;
+}
+.posts h2, .posts h1{
+    font-size:30px;
+    margin:20px 0;
+    font-weight: 600;
+}
+.posts h2 a, .posts h1 a{
+    color:#333;
+}
+.posts .entry-meta {
+    margin:0 0 30px;
+    text-transform:capitalize;
+    font-size:14px;
+}
+.posts img {
+    width:100%;
+    height:auto;
+}
+.posts p {
+    margin:25px 0;
+}
+.posts span {
+    color:#444;
+}
+.posts span a {
+    color:#444;
+}
+.post {
+    border:1px solid #ddd;
+    width: 31%;
+    box-shadow:0 3px 5px 0 rgba(0,0,0,.2);
+    padding:0;
+    border-radius:15px;
+    margin:20px 0;
+    overflow: hidden;
+    line-height:1.6em;
+    box-sizing: border-box;
+}
+.post img {
+    width:100%;
+    height:220px;
+}
+.post h1, .post h2 {
+    font-size:17px;
+    padding:15px;
+}
+.post h1 a, .post h2 a {
+    color:#333;
+}
+.post h1 a:hover, .post h2 a:hover {
+    color:#0099ff;
+}
+.post p {
+    overflow: hidden;
+}
+.post .entry-meta {
+    padding:0 15px 15px;
+    color:#666;
+    font-size:13px;
+}
+.post .entry-meta a {
+    color:#666;
+    text-transform: capitalize;
+}
+
+#comments {
+    padding:30px 0;
+    border-top:1px solid #ddd;
+    margin-top:30px;
+}
+#comments textarea {
+    padding:15px;
+    border:1px solid #ccc;
+    display:block;
+    width:100%;
+    margin:20px 0;
+}
+#comments input[type="submit"] {
+    background:#0099ff;
+    color:#fff;
+    border:0;
+}
+.comments {
+    padding:0 0 15px;
+    border-bottom:1px solid #ddd;
+    margin-bottom:30px;
+}   
+.comments h3 {
+    font-size:20px;
+    margin-bottom:20px;
+}   
+.comment {
+    padding:40px 0 15px;
+    border-top:1px solid #ddd;
+}
+ul.children .comment {
+    border:0;
+    border-top:1px solid #ddd;
+    margin-bottom:0;
+    padding:40px 20px 15px;
+    margin-top:20px;
+}
+.comment .comment-author a, .comment .comment-meta a {
+    color:#333;
+    font-style: normal;
+    font-weight: 600;
+}
+.comment .comment-meta {
+    margin-bottom:20px;
+    font-size:13px;
+    color:#666;
+}
+.comment .comment-meta a {
+    font-weight:400;
+}
+.comment .reply a {
+    margin:20px 0 0;
+    display: inline-block;
+    border:1px solid #0099ff;
+    padding:2.5px 10px;
+    font-size:13px;
+}
+.comment span.says, a.comment-edit-link {
+    display:none;
+}
+p.logged-in-as a {
+    color:#666;
+    font-size:13px;
+}
+.comment img {
+    width:40px;
+    float:left;
+    background:#0099ff;
+    margin:5px 15px 0 0;
+    height:40px;
+}
+h3#reply-title {
+    font-size:20px;
+}
+.comment-form-comment label {
+    display:none;
+}
+.nav-links a {
+    background:#0ab999;
+    color:#fff;
+    padding:5px 15px;
+    display:inline-block;
+}
+
+#footer {
+    background:#fff;
+    color:#333;
+    padding:0 0 15px;
+    text-align:center;
+}
+#footer .widget-gan {
+    padding:30px 0 20px;
+    background:#123;
+}
+#copyright {
+    padding:30px 0 15px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
