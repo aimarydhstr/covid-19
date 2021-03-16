@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main id="content">
-<?php if ( have_posts() ) : ?>
+<?php if ( have_posts()) : ?>
 <header class="header">
 <h1 class="entry-title"><?php printf( esc_html__( 'Search Results for: %s', 'blankslate' ), get_search_query() ); ?></h1>
 </header>

@@ -19,7 +19,6 @@
 <div id="site-description"><?php bloginfo( 'description' ); ?></div>
 </div>
 <nav id="menu">
-<div id="search"><?php get_search_form(); ?></div>
 <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 </nav>
 </div>
@@ -29,5 +28,12 @@
 <div class="back"></div>
 <div id="container">
 <?php else : ?>
+<div class="backs">
+<div id="containers">
+<h2>Welcome to Covid-19</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+<div id="search"><?php get_search_form(); ?></div>
+</div>
+</div>
 <div id="containers">
 <?php endif ?>
